@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --brand-primary: #273b6e;
+  --brand-primary-deep: #1a2543;
+  --brand-accent: #78bc43;
+  --brand-ink: #13213f;
+  --brand-surface: rgba(255, 255, 255, 0.88);
+  --brand-line: rgba(39, 59, 110, 0.14);
+  --brand-muted: #5d6985;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(120, 188, 67, 0.22), transparent 28%),
+    radial-gradient(circle at top right, rgba(39, 59, 110, 0.22), transparent 32%),
+    linear-gradient(180deg, #eff4fb 0%, #f6f8fc 35%, #eef1f6 100%);
+  color: var(--brand-ink);
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: rgba(39, 59, 110, 0.18);
+}
+
+.page-shell {
+  position: relative;
+}
+
+.page-shell::before {
+  content: "";
+  position: fixed;
+  inset: auto -10rem 8rem auto;
+  width: 24rem;
+  height: 24rem;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(120, 188, 67, 0.16), transparent 65%);
+  pointer-events: none;
+  filter: blur(6px);
+}
+
+.brand-frame {
+  position: relative;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)),
+    linear-gradient(120deg, var(--brand-primary-deep), var(--brand-primary) 54%, #345097);
+  box-shadow: 0 24px 60px rgba(16, 25, 50, 0.22);
+}
+
+.brand-heading {
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+input,
+select,
+textarea {
+  accent-color: var(--brand-primary);
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(39, 59, 110, 0.15);
+}
