@@ -50,6 +50,10 @@ export default function RootLayout({ children }) {
             </header>
 
             <main className="mx-auto max-w-3xl">{children}</main>
+
+            <footer className="mx-auto mt-10 max-w-3xl pb-4 text-center text-sm text-slate-500">
+              &copy; {new Date().getFullYear()} Esteban Candamo. All rights reserved.
+            </footer>
           </div>
         </div>
       </body>
