@@ -257,10 +257,12 @@ export default function SurveyForm({ token, alreadySubmitted }) {
               <textarea
                 className="mt-2 w-full rounded-xl border border-[color:var(--brand-line)] bg-white px-3 py-2 text-sm text-[color:var(--brand-ink)]"
                 rows={3}
+                maxLength={5000}
                 value={pipelineOther}
                 onChange={(e) => setPipelineOther(e.target.value)}
                 placeholder="Type your comment…"
               />
+              <div className="mt-2 text-xs text-[color:var(--brand-muted)]">Max 5,000 characters.</div>
             </div>
           )}
         </section>
@@ -272,12 +274,14 @@ export default function SurveyForm({ token, alreadySubmitted }) {
             <div className="mt-3">
               <Label>Huddle “Other” comment</Label>
               <textarea
-                className="mt-2 w-full rounded-xl border border-gray-300 bg-white px-3 py-2 text-sm"
+                className="mt-2 w-full rounded-xl border border-[color:var(--brand-line)] bg-white px-3 py-2 text-sm text-[color:var(--brand-ink)]"
                 rows={3}
+                maxLength={5000}
                 value={huddleOther}
                 onChange={(e) => setHuddleOther(e.target.value)}
                 placeholder="Type your comment…"
               />
+              <div className="mt-2 text-xs text-[color:var(--brand-muted)]">Max 5,000 characters.</div>
             </div>
           )}
         </section>
@@ -308,10 +312,12 @@ export default function SurveyForm({ token, alreadySubmitted }) {
           <textarea
             className="mt-2 w-full rounded-xl border border-[color:var(--brand-line)] bg-white px-3 py-2 text-sm text-[color:var(--brand-ink)]"
             rows={4}
+            maxLength={5000}
             value={improveOneThing}
             onChange={(e) => setImproveOneThing(e.target.value)}
             placeholder="Type your response…"
           />
+          <div className="mt-2 text-xs text-[color:var(--brand-muted)]">Max 5,000 characters.</div>
         </section>
 
         <section>
@@ -320,10 +326,12 @@ export default function SurveyForm({ token, alreadySubmitted }) {
           <textarea
             className="mt-2 w-full rounded-xl border border-[color:var(--brand-line)] bg-white px-3 py-2 text-sm text-[color:var(--brand-ink)]"
             rows={4}
+            maxLength={5000}
             value={anythingElse}
             onChange={(e) => setAnythingElse(e.target.value)}
             placeholder="Type your response…"
           />
+          <div className="mt-2 text-xs text-[color:var(--brand-muted)]">Max 5,000 characters.</div>
         </section>
 
       </div>
