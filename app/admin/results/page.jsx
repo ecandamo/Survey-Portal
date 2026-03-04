@@ -54,6 +54,14 @@ export default async function Results({ searchParams }) {
           Responses: <span className="font-semibold">{responses.length}</span> •
           Links used: <span className="font-semibold">{tokensUsed}</span> / {tokensTotal}
         </p>
+        <div className="mt-4">
+          <a
+            href={`/api/admin/export?key=${encodeURIComponent(key)}`}
+            className="inline-flex items-center rounded-xl bg-[color:var(--brand-primary)] px-4 py-2 text-sm font-semibold text-white transition hover:opacity-90"
+          >
+            Download CSV
+          </a>
+        </div>
         <div className="mt-5 grid gap-3 sm:grid-cols-3">
           <div className="rounded-xl bg-white/80 p-4 ring-1 ring-[color:var(--brand-line)]">
             <div className="text-sm text-[color:var(--brand-muted)]">Overall value (avg)</div>
